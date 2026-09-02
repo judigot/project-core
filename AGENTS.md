@@ -1,57 +1,9 @@
-# Project Instructions
+Load the overlay from https://github.com/judigot/ai. Start at AGENTS.md.
+This repository is the app workspace. Do not clone or download https://github.com/judigot/ai.
 
-## IDE Setup
+Fetch https://raw.githubusercontent.com/judigot/ai/main/AGENTS.md and the files it names from that same tree.
+Always use that live tree. Do not read ~/ai or any other local clone; those copies can be stale.
 
-### Claude Code
+## This repository
 
-Global settings from `~/ai` are automatically loaded via shell function:
-
-```sh
-claude   # Automatically uses --plugin-dir ~/ai
-```
-
-For project-specific agents, add the local plugin:
-
-```sh
-claude --plugin-dir ~/ai --plugin-dir .
-```
-
-### Cursor IDE
-
-- Global rules: Maintained in `~/ai/settings/rules.md` (not duplicated here)
-- Project agents: Reference with `@agents/<agent>.md`
-
-## Available Agents
-
-See `agents/*.md` files.
-
-## Directory Structure
-
-```
-project/
-├── .cursor/                  # Reusable template
-│   └── rules/
-│       ├── global-agents/
-│       │   └── RULE.md       # References ~/ai (always applied)
-│       └── project-agents/
-│           └── RULE.md       # References agents/README.md
-├── agents/                   # Project-specific agents
-│   ├── README.md             # Agent documentation
-│   └── agent-template.md     # Template for new agents
-├── AGENTS.md                 # This file
-└── CLAUDE.md                 # Entry point
-```
-
-## Global Resources
-
-@~/ai/README.md
-
-## Notes for AI Assistants
-
-- Check agent descriptions to understand when to invoke them
-- Follow coding standards from `~/ai/settings/rules.md`
-
-## Global Rules
-
-Always load and follow `~/ai/settings/rules.md` as the single canonical ruleset for all CLI agents and IDEs. Treat its instructions as mandatory for every task.
-
+Replace this section with guidance for this project only.
