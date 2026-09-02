@@ -1,6 +1,6 @@
 # Agents
 
-Project-specific agents for this repository.
+Project-specific agents for this repository. Overlay agents stay in `~/ai`.
 
 ## Available Agents
 

@@ -1,18 +1,14 @@
 ---
-description: Global AI agents, skills, and settings from ~/ai repository
+description: Global AI overlay from ~/ai
 globs:
 alwaysApply: true
 ---
 
 # Global AI Configuration
 
-Loads shared agents, skills, and coding standards from `~/ai`.
-
-## Agents & Skills
-
-@~/ai/README.md
-
-## Coding Standards
-
+@~/ai/settings/rules.md
+@~/ai/settings/workflow.md
+@~/ai/settings/stack.md
+@~/ai/settings/references.md
+@~/ai/settings/ecosystem.md
 @AGENTS.md
-

@@ -1,16 +1,27 @@
 # Project Instructions
 
+This file is the per-project stub from `judigot/project-core`. Copy it into
+every app. Do not copy `judigot/ai` into the app.
+
+Load the overlay when `~/ai` is available:
+
+@~/ai/settings/rules.md
+@~/ai/settings/workflow.md
+@~/ai/settings/stack.md
+@~/ai/settings/references.md
+@~/ai/settings/ecosystem.md
+
+Application foundation is `judigot/template-monorepo`, not this stub.
+
 ## IDE Setup
 
 ### Claude Code
 
-Global settings from `~/ai` are automatically loaded via shell function:
-
 ```sh
-claude   # Automatically uses --plugin-dir ~/ai
+claude   # uses --plugin-dir ~/ai
 ```
 
-For project-specific agents, add the local plugin:
+Project-specific agents:
 
 ```sh
 claude --plugin-dir ~/ai --plugin-dir .
@@ -18,40 +29,29 @@ claude --plugin-dir ~/ai --plugin-dir .
 
 ### Cursor IDE
 
-- Global rules: Maintained in `~/ai/settings/rules.md` (not duplicated here)
-- Project agents: Reference with `@agents/<agent>.md`
+- Global overlay: `~/ai/settings/*.md` (not duplicated in this repo)
+- Project agents: `@agents/<agent>.md`
 
 ## Available Agents
 
-See `agents/*.md` files.
+See `agents/*.md`. Add product agents here; do not fork overlay agents from
+`~/ai`.
 
 ## Directory Structure
 
 ```
 project/
-├── .cursor/                  # Reusable template
-│   └── rules/
-│       ├── global-agents/
-│       │   └── RULE.md       # References ~/ai (always applied)
-│       └── project-agents/
-│           └── RULE.md       # References agents/README.md
-├── agents/                   # Project-specific agents
-│   ├── README.md             # Agent documentation
-│   └── agent-template.md     # Template for new agents
-├── AGENTS.md                 # This file
-└── CLAUDE.md                 # Entry point
+├── .cursor/rules/
+│   ├── global-agents/RULE.md     # always load ~/ai
+│   └── project-agents/RULE.md    # load agents/README.md
+├── agents/                       # project-specific agents only
+│   ├── README.md
+│   └── agent-template.md
+├── AGENTS.md
+└── CLAUDE.md                     # @AGENTS.md
 ```
 
-## Global Resources
+## This repository
 
-@~/ai/README.md
-
-## Notes for AI Assistants
-
-- Check agent descriptions to understand when to invoke them
-- Follow coding standards from `~/ai/settings/rules.md`
-
-## Global Rules
-
-Always load and follow `~/ai/settings/rules.md` as the single canonical ruleset for all CLI agents and IDEs. Treat its instructions as mandatory for every task.
-
+Replace this section with product-specific guidance. Keep the overlay
+includes above unchanged.
