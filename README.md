@@ -11,8 +11,9 @@ local Claude Code plugin (`cc` / `--plugin-dir`).
 
 Do not copy the overlay into an app, and do not list overlay files in the app.
 
-The stub is portable [AGENTS.md](https://agents.md/): plain Markdown, no
-IDE-specific includes.
+The workflow is portable [AGENTS.md](https://agents.md/): plain Markdown that
+any coding agent can follow. Cursor and Claude Code files are adapters. They
+point at `AGENTS.md`; they do not replace it.
 
 ```text
 judigot/ai            overlay. Start at AGENTS.md. Not the app workspace.
@@ -23,8 +24,9 @@ judigot/project-core  these files, in every app
 
 | Path | Purpose |
 | --- | --- |
-| `AGENTS.md` | Portable overlay loader plus a repo-specific section. |
-| `CLAUDE.md` | Points at `AGENTS.md` for tools that still look for that filename. |
+| `AGENTS.md` | Workflow. Overlay loader plus a repo-specific section. |
+| `CLAUDE.md` | Claude Code adapter. Points at `AGENTS.md`. |
+| `.cursor/rules/` | Cursor adapter. Always-on rule loads `AGENTS.md`. |
 | `agents/` | Project-specific agents only. |
 
 If the overlay changes, update this stub, then re-seed projects.
