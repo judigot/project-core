@@ -3,9 +3,13 @@
 Per-project agent stub. Copy these files into every app.
 
 The overlay lives in `judigot/ai`. Apps load it from **one entrypoint**:
-`AGENTS.md` in that repo (`~/ai/AGENTS.md` when cloned, otherwise GitHub raw
-on `main`). Do not copy the overlay into an app, and do not list overlay
-files in the app.
+fetch `https://raw.githubusercontent.com/judigot/ai/main/AGENTS.md` and the
+files it names from that same tree. Always use that live tree. Do not clone
+or download `judigot/ai` to load it, and do not read `~/ai` or any other
+local clone (those copies can be stale). `~/ai` is only for the optional
+local Claude Code plugin (`cc` / `--plugin-dir`).
+
+Do not copy the overlay into an app, and do not list overlay files in the app.
 
 ```text
 judigot/ai            overlay. Start at AGENTS.md. Not the app workspace.
